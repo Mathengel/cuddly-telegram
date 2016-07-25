@@ -44,8 +44,10 @@ function userFctry($http, $location){
         }
         else{
             callback(message);
+            $location.path('/')
         }
     }
+
 
     return factory;
         

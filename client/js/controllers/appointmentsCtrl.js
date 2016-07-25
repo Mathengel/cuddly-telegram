@@ -12,6 +12,8 @@ function appointmentsCtrl($scope, appointmentsFctry, userFctry, $routeParams){
     }
     getAppointments();
 
+
+
     function getUser(){ 
         userFctry.getCurrentUser(function(data){
         $scope.currentUser = data;
@@ -19,6 +21,7 @@ function appointmentsCtrl($scope, appointmentsFctry, userFctry, $routeParams){
     }
 
     getUser();
+  
 
     $scope.isPatient = function(appointment, currentUser){
         if(appointment.name == currentUser.name){

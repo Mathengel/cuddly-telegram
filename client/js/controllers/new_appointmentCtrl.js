@@ -11,7 +11,8 @@ function new_appointmentCtrl($scope, appointmentsFctry, userFctry, $routeParams)
     }
 
     getUser();
-    
+        
+        
 
     $scope.create = function(newAppointment, currentUser){
            $scope.newAppointment = {};

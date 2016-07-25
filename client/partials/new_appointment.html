@@ -5,9 +5,9 @@
 
 <form class = "form" ng-submit="create(newAppointment, currentUser)">
     <br>
-    Date: <input type="date" ng-model="newAppointment.date">
+    Date: <input type="date" ng-model="newAppointment.date" placeholder="yyyy-MM-dd" min="2016-07-27" max="2020-07-26" required >
     <br>
-    Time: <input type="time" ng-model="newAppointment.time">
+    Time: <input type="time" ng-model="newAppointment.time" placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" required>
     <br>
     Symptoms: <textarea rows="3" ng-model="newAppointment.symptom"></textarea>
     <input type="submit" value="Schedule" class="btn btn-primary">
