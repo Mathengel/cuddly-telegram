@@ -1,9 +1,9 @@
 <h1>New Appointment</h1>
 <h4>you are: </h4><p>{{currentUser.name}}</p>
 
-<div id="hey" ng-show=symptomError()>You're pains must be greater than 3 charactors!</div>
+<div id="hey" ng-show=tooMany()>That date is all booked up! Please try another.</div>
 
-<form class = "form" ng-submit="create(newAppointment, currentUser)">
+<form class = "form" ng-submit="create(newAppointment, currentUser, appointments)">
     <br>
     Date: <input type="date" ng-model="newAppointment.date" placeholder="yyyy-MM-dd" min="2016-07-27" max="2020-07-26" required >
     <br>
