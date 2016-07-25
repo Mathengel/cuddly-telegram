@@ -1,0 +1,15 @@
+<h1>New Appointment</h1>
+<h4>you are: </h4><p>{{currentUser.name}}</p>
+
+<div id="hey" ng-show=symptomError()>You're pains must be greater than 3 charactors!</div>
+
+<form class = "form" ng-submit="create(newAppointment, currentUser)">
+    <br>
+    Date: <input type="date" ng-model="newAppointment.date">
+    <br>
+    Time: <input type="time" ng-model="newAppointment.time">
+    <br>
+    Symptoms: <textarea rows="3" ng-model="newAppointment.symptom"></textarea>
+    <input type="submit" value="Schedule" class="btn btn-primary">
+    <a class="btn btn-danger" href="/#/dashboard">Cancel</a>
+</form>

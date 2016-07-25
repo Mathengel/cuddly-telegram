@@ -5,10 +5,12 @@ function userFctry($http, $location){
     console.log("userFctry factory loaded!!!.. ")
     var thisUser = null;
     var message = {name: "no current user"}
+
     // factory.show = function(id, success){
     //         console.log("userFctry.show fired!!!")
     //         $http.get('/users/'+id).then(success);
     //     }
+
     factory.checkUsers = function(user, callback) {
         //initialize a flag
         var newUser = true;
@@ -37,6 +39,7 @@ function userFctry($http, $location){
 
     factory.getCurrentUser = function(callback){
         if(thisUser){
+            console.log(thisUser)
             callback(thisUser);
         }
         else{

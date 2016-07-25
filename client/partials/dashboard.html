@@ -1,36 +1,42 @@
 <a href="/#/dashboard">Dashboard</a> | <a href="/#/login">Logout</a>
 
-<h1>Welcome, {{currentUser.name}}</h1>
+<h4>Welcome, {{currentUser.name}}</h4>
+<h1>Doctor's Appointments</h1>
+
 
 <h4>Search</h4>
-Topic: <input type="text" ng-model = "anything.topic">
-Username: <input type="text" ng-model = "anything.userName">
+Patient: <input type="text" ng-model = "anything.name">
+Symptom: <input type="text" ng-model = "anything.symptom">
 <br>
 <br>
-<table>
+<table class = "table">
 <thead>
     <tr>
-        <th>Topic</th>
-        <th>Username</th>
-        <th>Category</th>
-        <th>Posts</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Patient Name</th>
+        <th>Symptoms</th>
     </tr>
 </thead>
 <tbody>
-    <tr ng-repeat = "topic in topics | filter:anything:strict">
-        <td><a href="/#/topics/{{topic._id}}">{{topic.topic}}</a></td>
-        <td><a href="/#/user/{{topic._user}}">{{topic.name}}</a></td>
-        <td>{{topic.category}}</td>
-        <td>{{topic.posts.length}}</td>
+    <tr ng-repeat = "appointment in appointments | orderBy: 'date' |filter:anything:strict">
+        <td>{{appointment.date | date : format : yyyy}}</td>
+        <td>{{appointment.time | date: "HH:mm:ss"}}</td>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.symptom}}</td>
+        <td ng-show="isPatient(appointment, currentUser)"><button ng-click="delete(appointment)">Cancel</button></a></td>
     </tr>
 </tbody>
 </table>
 <br>
 <br>
 <br>
-<h3>Add a new Topic!</h3>
 <br>
-<form ng-submit="create(newTopic, currentUser)">
+
+<a class="btn btn-primary" href="/#/new_appointment">Schedule an Appointment</a>
+
+
+<!-- <form ng-submit="create(newTopic, currentUser)">
     <label>Topic:
         <input type="text" ng-model="newTopic.topic">
     </label>
@@ -47,7 +53,7 @@ Username: <input type="text" ng-model = "anything.userName">
         </select>
     </label>
     <input type="submit" value="add">
-</form>
+</form> -->
 <br>
 <br>
 <br>

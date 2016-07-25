@@ -7,12 +7,12 @@ app.config(function($routeProvider){
         })
         .when('/dashboard', {
             templateUrl: 'partials/dashboard.html',
-            controller: 'topicCtrl'
+            controller: 'appointmentsCtrl'
         })
-        // .when('/topics/:id', {
-        //     templateUrl: 'partials/topics.html',
-        //     controller: 'discussionCtrl'
-        // })
+        .when('/new_appointment', {
+            templateUrl: 'partials/new_appointment.html',
+            controller: 'new_appointmentCtrl'
+        })
         // .when('/user/:id', {
         //     templateUrl: 'partials/user.html',
         //     controller: 'userCtrl'
