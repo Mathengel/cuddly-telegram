@@ -6,11 +6,6 @@ function userFctry($http, $location){
     var thisUser = null;
     var message = {name: "no current user"}
 
-    // factory.show = function(id, success){
-    //         console.log("userFctry.show fired!!!")
-    //         $http.get('/users/'+id).then(success);
-    //     }
-
     factory.checkUsers = function(user, callback) {
         //initialize a flag
         var newUser = true;

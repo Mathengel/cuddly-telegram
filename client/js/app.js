@@ -13,10 +13,6 @@ app.config(function($routeProvider){
             templateUrl: 'partials/new_appointment.html',
             controller: 'new_appointmentCtrl'
         })
-        // .when('/user/:id', {
-        //     templateUrl: 'partials/user.html',
-        //     controller: 'userCtrl'
-        // })
         .otherwise({
             redirectTo: '/'
         })                                                                

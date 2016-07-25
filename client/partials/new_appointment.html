@@ -9,7 +9,7 @@
     <br>
     Time: <input type="time" ng-model="newAppointment.time" placeholder="HH:mm:ss" min="08:00:00" max="17:00:00" required>
     <br>
-    Symptoms: <textarea rows="3" ng-model="newAppointment.symptom"></textarea>
+    Symptoms: <textarea rows="3" ng-model="newAppointment.symptom"  minlength="3" required></textarea>
     <input type="submit" value="Schedule" class="btn btn-primary">
     <a class="btn btn-danger" href="/#/dashboard">Cancel</a>
 </form>

@@ -20,11 +20,5 @@ function appointmentsFctry($http, $location){
             console.log("appointmentsFctry.delete fired!!!", appointment)
             $http.delete('/appointments/'+appointment._id).then(success);
         }
-
-        // show: function(id, success){
-        //     console.log("appointmentsFctry.show fired!!")
-        //     $http.get('/topics/'+id).then(success);
-        // }
-
     }
 }

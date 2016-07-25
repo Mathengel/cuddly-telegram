@@ -38,14 +38,4 @@ module.exports = {
         })
     }
 
-    // show: function(req, res){
-    //     console.log('getting one topic', req.params.id)
-    //     Appointment.findOne({_id: req.params.id}, function(err, topic){
-    //         if(err){
-    //             console.log(err)
-    //             res.status(400).json(err);
-    //         }
-    //         res.json(topic);             
-    //     })
-    // }
 }
